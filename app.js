@@ -4,10 +4,7 @@ async function main(){
     var userData = await fetchUsers();
     populateUsersTab(userData);
 
-    window.addEventListener("click",async function onClick(e){
-        // console.log("#####",e.target.id);
-        // console.log(e.target.outerText);
-        
+    window.addEventListener("click",async function onClick(e){        
         var ele = document.getElementById(e.target.id);
         if(ele.className === 'user_data'){
             populatePostsTab(e.target.id,e.target.outerText);
@@ -17,13 +14,10 @@ async function main(){
 
 main();
 
-//set a onclick listener on global where id == something or classname == something
-
 async function fetchUsers(){
    var userData = await fetch('https://jsonplaceholder.typicode.com/users')
     .then((response) => response.json())
     .then((json) => json);
-    // console.log(userData);
     return userData;
 }
 
@@ -40,10 +34,7 @@ async function populatePostsTab(userId,userName){
     element.innerHTML= "";
     var newText = document.createElement('h2')
     newText.innerHTML = `<span class="span-teal">Showing Posts for : ${userName}</span>`;
-    element.appendChild(newText);
-    // element.appendChild(document.createTextNode(`Showing Posts for : ${userName}`));
-    
-
+    element.appendChild(newText);    
     newDiv = document.createElement("div");
     var htmlString = ``;
     postsData.map((x)=>{
@@ -56,16 +47,10 @@ async function populatePostsTab(userId,userName){
         `;
         htmlString = htmlString + newPost;
     })
-    // newDiv.innerHTML = `<div class="post">id:,title:,body:</div>`;
     newDiv.innerHTML = htmlString;
     element.appendChild(newDiv)
-    console.log(postsData);
-    console.log(userName);
+}
 
-}
-function onClickUser(userId){
-    populatePostsTab(data);
-}
 
 function populateUsersTab(userData){
     var tbodyRef = document.getElementById('users_table_body');
