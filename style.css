@@ -1,0 +1,20 @@
+#main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 95vh;
+}
+
+#USERS {
+  border: 1px solid black;
+  width: 45vw;
+  height: auto;
+  padding: 1rem;
+}
+
+#POSTS {
+  border: 1px solid black;
+  width: 45vw;
+  height: auto;
+  padding: 1rem;
+}
