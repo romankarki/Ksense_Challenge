@@ -3,6 +3,7 @@
   flex-direction: row;
   justify-content: space-between;
   height: 95vh;
+  margin: 3px;
 }
 
 #USERS {
@@ -10,11 +11,25 @@
   width: 45vw;
   height: auto;
   padding: 1rem;
+  cursor: pointer;
 }
 
 #POSTS {
-  border: 1px solid black;
-  width: 45vw;
+  width: 50vw;
   height: auto;
   padding: 1rem;
+}
+
+td:hover {
+  color: blue;
+}
+
+.post {
+  margin: 10px;
+  border: 1px solid black;
+  padding: 1rem;
+}
+.span-teal {
+  color: teal;
+  font-weight: bold;
 }
