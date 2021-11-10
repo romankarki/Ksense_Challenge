@@ -18,7 +18,6 @@
   width: 53vw;
   height: auto;
   padding: 1rem;
-  border: 1px solid black;
   overflow-y: auto;
 }
 
@@ -34,4 +33,19 @@ td:hover {
 .span-teal {
   color: teal;
   font-weight: bold;
+}
+
+@media only screen and (max-width: 600px) {
+  #main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 95vh;
+    margin: 3px;
+  }
+  #USERS,
+  #POSTS {
+    width: 100vw;
+    height: auto;
+  }
 }
