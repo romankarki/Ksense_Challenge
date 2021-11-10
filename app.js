@@ -1,5 +1,3 @@
-console.log("Connected");
-
 async function main(){
     var userData = await fetchUsers();
     populateUsersTab(userData);
