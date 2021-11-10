@@ -15,9 +15,11 @@
 }
 
 #POSTS {
-  width: 50vw;
+  width: 53vw;
   height: auto;
   padding: 1rem;
+  border: 1px solid black;
+  overflow-y: auto;
 }
 
 td:hover {
